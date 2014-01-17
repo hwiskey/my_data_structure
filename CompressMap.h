@@ -1,7 +1,8 @@
 /*
 @file		CompressMap.h
 @author		huangwei
-@param		Copyright (c) 2004-2013  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×µç¹¤ï¿½ï¿½ï¿½ï¿½
+@param		Email: huang-wei@corp.netease.com
+@param		Copyright (c) 2004-2013  º¼ÖÝÍøÒ×À×µç¹¤×÷ÊÒ
 @date		2013/4/28
 @brief		
 */
@@ -18,9 +19,9 @@
 /**
  * CompressStorage
  *
- * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½æ´¢
- * ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½Ö§ï¿½Ö»ï¿½ï¿½Õ»ï¿½ï¿½ï¿½
- * ï¿½ï¿½ï¿½ß³Ì°ï¿½È«
+ * ¶þ½øÖÆÑ¹Ëõ´æ´¢
+ * ÏÖÔÚ»¹²»Ö§³Ö»ØÊÕ»úÖÆ
+ * ·ÇÏß³Ì°²È«
  */
 class CompressStorage
 {
@@ -36,14 +37,14 @@ public:
 protected:
 	struct _Block
 	{
-		int		idx;		// blocksï¿½ï¿½Î»ï¿½ï¿½
-		int		w_off;		// bufÐ´ï¿½ï¿½Æ«ï¿½ï¿½
-		int		old_len;	// Î´Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		int		compress_len;	// Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-		int		cbuf_len;	// cbufï¿½ï¿½ï¿½ï¿½
-		char*	cbuf;		// ï¿½ï¿½ï¿½ï¿½(Ñ¹ï¿½ï¿½)
-		int		buf_len;	// bufï¿½ï¿½ï¿½ï¿½
-		char*	buf;		// ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Ñ¹ï¿½ï¿½)
+		int		idx;		// blocksÖÐÎ»ÖÃ
+		int		w_off;		// bufÐ´ÈëÆ«ÒÆ
+		int		old_len;	// Î´Ñ¹Ëõ³¤¶È
+		int		compress_len;	// Ñ¹Ëõ³¤¶È
+		int		cbuf_len;	// cbuf³¤¶È
+		char*	cbuf;		// Êý¾Ý(Ñ¹Ëõ)
+		int		buf_len;	// buf³¤¶È
+		char*	buf;		// Êý¾Ý(·ÇÑ¹Ëõ)
 	};
 
 	typedef std::vector <_Block>		_BlockVec;
@@ -88,8 +89,8 @@ protected:
 /**
  * CompressLazyMap
  *
- * ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½map
- * Ö§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½insertï¿½ó£¬½ï¿½ï¿½ï¿½sortï¿½ï¿½È»ï¿½ï¿½find
+ * ´øÑ¹ËõµÄÀÁ¶èmap
+ * Ö§³ÖÅúÁ¿insertºó£¬½øÐÐsort£¬È»ºófind
  */
 template <typename K, typename T>
 class CompressLazyMap
